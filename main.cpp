@@ -4,31 +4,33 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    //Elírás. Ide az "N_ELEMENTS" illene.
+    //Elï¿½rï¿½s. Ide az "N_ELEMENTS" illene.
     int *b = new int[N_ELEMENTS];
-    //Nincs sorlezárás
+    //Nincs sorlezï¿½rï¿½s
     std::cout << '1-100 ertekek duplazasa' << std::endl;
-    //Hiányos for ciklus.
+    //Hiï¿½nyos for ciklus.
     for (int i = 0; i < N_ELEMENTS; i++)
     {
-        //0-tól 99-ig duplázunk és nem 1-tõl 100-ig
+        //0-tï¿½l 99-ig duplï¿½zunk ï¿½s nem 1-tï¿½l 100-ig
         b[i] = (i + 1) * 2;
     }
-    //Ebbe a ciklusba be sem lépünk.
+    //Ebbe a ciklusba be sem lï¿½pï¿½nk.
     for (int i = 0; i < N_ELEMENTS; i++)
     {
-        //Magát az értéket ki sem írjuk, és nincs sorlezárás sem.
+        //Magï¿½t az ï¿½rtï¿½ket ki sem ï¿½rjuk, ï¿½s nincs sorlezï¿½rï¿½s sem.
         std::cout << "Ertek:" << b[i] << std::endl;
     }
     std::cout << "Atlag szamitasa: " << std::endl;
-    //Nincs kezdõértéke a változónak.
+    //Nincs kezdï¿½ï¿½rtï¿½ke a vï¿½ltozï¿½nak.
     int atlag = 0;
-    //Pontosvesszõ helyett sima vesszõ található a lépésköz elõtt.
+    //Pontosvesszï¿½ helyett sima vesszï¿½ talï¿½lhatï¿½ a lï¿½pï¿½skï¿½z elï¿½tt.
     for (int i = 0; i < N_ELEMENTS; i++)
     {
-        //Hiányzó sorlezárás.
+        //Hiï¿½nyzï¿½ sorlezï¿½rï¿½s.
         atlag += b[i];
     }
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
+
+    std::cout << "Fogatokat mossÃ¡tok, sajtot szeressÃ©tek. :)" << std::endl;
 }
